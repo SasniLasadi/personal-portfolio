@@ -1,0 +1,22 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g-traffic-data" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F1D488"/>
+      <stop offset="100%" stop-color="#E7BE63"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#g-traffic-data)"/>
+  <circle cx="1080" cy="140" r="260" fill="#ffffff" opacity="0.10"/>
+  <circle cx="160" cy="700" r="220" fill="#17130D" opacity="0.06"/>
+
+  <g transform="translate(640,360)" opacity="0.9">
+    <rect x="-70" y="-52" width="140" height="104" rx="10" fill="none" stroke="#17130D" stroke-width="2.5"/>
+    <circle cx="-32" cy="-20" r="12" fill="none" stroke="#17130D" stroke-width="2.5"/>
+    <path d="M -70 34 L -20 -6 L 10 20 L 40 -14 L 70 24" fill="none" stroke="#C4461A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="640" y="470" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="22" fill="#17130D" opacity="0.75">
+    Image coming soon
+  </text>
+  <text x="60" y="740" font-family="sans-serif" font-weight="800" font-size="34" fill="#17130D" opacity="0.85">Traffic Data Analysis</text>
+</svg>

@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #FFFFFF;
+  --color-bg-soft: #FBF1DA;
+  --color-surface: #FFFDF8;
+  --color-ink: #17130D;
+  --color-ink-soft: #5B5140;
+  --color-accent: #C9891E;
+  --color-accent-warm: #C4461A;
+  --color-accent-ink: #FFFFFF;
+  --color-line: rgba(23, 19, 13, 0.12);
+  --color-hero-bg: #E7BE63;
+  --color-hero-bg-soft: #F1D488;
+
+  --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+.dark {
+  --color-bg: #14110B;
+  --color-bg-soft: #1D1811;
+  --color-surface: #201A12;
+  --color-ink: #F4EEDE;
+  --color-ink-soft: #C9BEA4;
+  --color-accent: #E8B94F;
+  --color-accent-warm: #E37A44;
+  --color-accent-ink: #17130A;
+  --color-line: rgba(244, 238, 222, 0.14);
+  --color-hero-bg: #1D1811;
+  --color-hero-bg-soft: #241C13;
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* faint dot-grid texture used behind the hero */
+.dot-grid {
+  background-image: radial-gradient(var(--color-ink) 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.06;
+}
