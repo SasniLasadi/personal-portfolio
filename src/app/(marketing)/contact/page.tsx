@@ -14,7 +14,7 @@ export default function ContactPage() {
           Always open to a good <span className="text-accent">conversation.</span>
         </h1>
         <p className="mt-6 max-w-sm font-body text-base leading-relaxed text-ink-soft">
-          Whether it's a collaboration idea, a project you'd like a second pair of 
+          Whether it&apos;s a collaboration idea, a project you&apos;d like a second pair of
           hands on, or just a chance to connect - feel free to reach out.
         </p>
 
