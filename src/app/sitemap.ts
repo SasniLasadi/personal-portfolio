@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { projects } from "@/content/projects";
 import { internshipProjects } from "@/content/internship";
 
-const BASE_URL = "https://example.com";
+const BASE_URL = "https://personal-portfolio-sand-kappa.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [

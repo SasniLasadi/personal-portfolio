@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, Inter, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 
@@ -25,7 +26,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://personal-portfolio-sand-kappa.vercel.app"),
   title: {
     default: `${siteConfig.name} - ${siteConfig.role}`,
     template: `%s - ${siteConfig.name}`,
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         className={`${archivo.variable} ${inter.variable} ${jetbrainsMono.variable} font-body antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

@@ -34,15 +34,13 @@ export default function ResumePage() {
             <div key={`${entry.role}-${entry.company}`} className="relative">
               <span className="absolute -left-[29px] top-1.5 h-2.5 w-2.5 rounded-full bg-accent" />
 
-              <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                <h3 className="font-display text-lg font-bold text-ink">{entry.role}</h3>
-                <p className="font-mono text-xs text-ink-soft">
-                  {entry.period}
-                  {entry.duration ? ` · ${entry.duration}` : ""}
-                </p>
-              </div>
+              <h3 className="font-display text-lg font-bold text-ink">{entry.role}</h3>
+              <p className="mt-0.5 font-mono text-xs text-ink-soft">
+                {entry.period}
+                {entry.duration ? ` · ${entry.duration}` : ""}
+              </p>
 
-              <p className="mt-0.5 font-body text-sm text-ink-soft">
+              <p className="mt-1.5 font-body text-sm text-ink-soft">
                 {entry.company}
                 {entry.type ? ` · ${entry.type}` : ""}
               </p>
