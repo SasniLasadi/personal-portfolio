@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required").max(120),
@@ -24,10 +27,23 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: message }, { status: 422 });
   }
 
-  // NOTE: this currently just logs the submission. Wire in an email
-  // provider (e.g. Resend, Postmark) here before going to production —
-  // see README.md for the two-line integration.
-  console.log("New contact form submission:", parsed.data);
+  const { name, email, subject, message } = parsed.data;
+
+  try {
+    await resend.emails.send({
+      from: "Portfolio Contact Form <onboarding@resend.dev>",
+      to: "sasnilasadi@gmail.com",
+      replyTo: email,
+      subject: `New message: ${subject}`,
+      text: `From: ${name} (${email})\n\n${message}`,
+    });
+  } catch (error) {
+    console.error("Failed to send contact email:", error);
+    return NextResponse.json(
+      { error: "Failed to send message. Please try again." },
+      { status: 500 }
+    );
+  }
 
   return NextResponse.json({ ok: true });
 }

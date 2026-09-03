@@ -1,8 +1,8 @@
-# Golden Hour — Sasni Lasadi Portfolio (Next.js 14 + TypeScript)
+# Golden Hour - Sasni Lasadi Portfolio (Next.js 14 + TypeScript)
 
 A personal portfolio built for Sasni Lasadi: warm "Golden Hour" theme (white +
 amber/terracotta in light mode, deep ink + gold in dark mode), bold display
-type, and a two-column hero built around a real portrait — every section as
+type, and a two-column hero built around a real portrait - every section as
 its own page.
 
 ## Stack

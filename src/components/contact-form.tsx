@@ -12,10 +12,11 @@ export function ContactForm() {
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     setStatus("loading");
     setErrorMsg("");
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
 
     try {
@@ -31,7 +32,7 @@ export function ContactForm() {
       }
 
       setStatus("success");
-      e.currentTarget.reset();
+      form.reset();
     } catch (err) {
       setStatus("error");
       setErrorMsg(err instanceof Error ? err.message : "Something went wrong.");
@@ -65,7 +66,7 @@ export function ContactForm() {
 
         {status === "success" && (
           <span className="flex items-center gap-1.5 font-body text-sm text-ink-soft">
-            <CheckCircle2 size={16} className="text-accent" /> Message sent — thanks!
+            <CheckCircle2 size={16} className="text-accent" /> Message sent - thanks!
           </span>
         )}
         {status === "error" && (

@@ -6,10 +6,10 @@ export const metadata: Metadata = { title: "Resume" };
 
 export default function ResumePage() {
   return (
-    <section className="mx-auto max-w-content px-6 py-16 md:px-10 md:py-24">
+    <section className="mx-auto max-w-content px-6 py-12 md:px-10 md:py-16">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <div>
-          <p className="font-mono text-sm text-ink-soft">04 / Résumé</p>
+          <p className="font-mono text-sm text-ink-soft">04 / Resume</p>
           <h1 className="mt-3 max-w-xl text-balance font-display text-4xl font-extrabold leading-tight text-ink sm:text-5xl">
             The journey so far.
           </h1>

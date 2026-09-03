@@ -70,7 +70,7 @@ export const education: EducationEntry[] = [
     years: "2021 - 2023",
     title: "G.C.E Advanced Level",
     place: "Southlands College",
-    detail: "Physical Science",
+    detail: "Physical Science Stream",
     badge: "1C and 2S Passes",
   },
   {
