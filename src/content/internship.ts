@@ -120,6 +120,39 @@ export const internshipProjects: InternshipProject[] = [
     featured: true,
     confidential: false,
   },
+  {
+    slug: "jayfernandocoach",
+    title: "Coaching Consortium International - Executive Coaching Website & CMS",
+    company: "Incarnate",
+    period: "2026 August - 2026 September",
+    summary:
+      "A full rebuild of jayfernandocoach.com, moving a Colombo based executive coaching practice off WordPress onto a custom PHP site with its own admin CMS, so the client can edit every page without touching code.",
+    body: [
+      "Coaching Consortium International is the leadership and executive coaching practice of Jay Fernando, offering leader development, team effectiveness, and coaching education programs for individuals and organisations. The site covers six pages - Home, About, Services, Experts, Events, and Contact that are carrying over all the original copy, testimonials, team bios, service packages, FAQs, and event listings, with a new visual theme and a fully responsive layout.",
+      "The project started as a Node.js and TypeScript build, but the client's cPanel hosting only supports PHP, so the platform was rebuilt in plain PHP with a JSON flat-file content store. That meant no database to provision, and the whole site deploys by uploading files to the existing hosting. Content is managed through a custom admin panel where each editable section is declared in a single schema file, so the same forms handle both one-off page sections and repeatable lists like team members, testimonials, and events.",
+    ],
+    stack: ["HTML/CSS", "JavaScript", "PHP", "JSON"],
+    liveUrl: "https://jayfernandocoach.com/",
+    contribution: [
+      "Rebuilt the entire public site in custom PHP, migrating all content from the previous WordPress install.",
+      "Built a schema-driven admin CMS with editors for every page section and full add, edit, delete, and reorder control over team, testimonials, FAQs, events, gallery, and more.",
+      "Implemented secure admin authentication with hashed passwords, session handling, and an in-app password change screen.",
+      "Built image and PDF uploads, and a contact form with a spam honeypot that feeds an admin inbox with read and delete controls.",
+      "Chose a locked JSON flat-file store so the site runs on the client's shared hosting with no database setup, and hardened the data, include, and upload folders with .htaccess rules.",
+      "Designed the visual theme and iconography, and fixed mobile layout issues including hero spacing and centered, justified text blocks.",
+      "Backed up the live WordPress site and migrated the domain over to the new build on the existing cPanel hosting.",
+    ],
+    cover: "/images/projects/jayfernandocoach/hero-banner.jpg",
+    gallery: [
+      "/images/projects/jayfernandocoach/services-page.jpg",
+      "/images/projects/jayfernandocoach/contact-page.jpg",
+      "/images/projects/jayfernandocoach/admin-dashboard.jpg",
+    ],
+    featured: true,
+    confidential: false,
+  },
+
+  
 ];
 
 export function getInternshipProjectBySlug(slug: string) {

@@ -25,8 +25,8 @@ export const siteConfig = {
   currentlyBuilding: [
     "Building and shipping full-stack client platforms - Next.js frontends, Laravel/PHP CMS backends",
     "Handling infra & deployment: DigitalOcean, Plesk, Namecheap hosting, Cloudflare, SSL",
+    "Building backend & data systems - Node/Express APIs, PDF generation, ML/backend work on CrackCode (a gamified MERN-stack learning platform)",
     "Integrating third-party APIs (Google Maps) and building admin CMS panels from scratch",
-    "Contributing to CrackCode - a gamified MERN stack programming learning platform",
   ],
   techStack: [
     { category: "Frontend", items: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"] },
@@ -36,8 +36,8 @@ export const siteConfig = {
     { category: "Other", items: ["Go", ".NET", "WordPress / Elementor"] },
   ],
   stats: [
-    { value: "12+", label: "Projects Built" },
-    { value: "15+", label: "Technologies" },
+    { value: "15+", label: "Projects Built" },
+    { value: "12+", label: "Technologies" },
     { value: "2024", label: "Started Coding" },
   ],
 } as const;
