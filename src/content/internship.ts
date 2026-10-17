@@ -134,13 +134,11 @@ export const internshipProjects: InternshipProject[] = [
     stack: ["HTML/CSS", "JavaScript", "PHP", "JSON"],
     liveUrl: "https://jayfernandocoach.com/",
     contribution: [
-      "Rebuilt the entire public site in custom PHP, migrating all content from the previous WordPress install.",
-      "Built a schema-driven admin CMS with editors for every page section and full add, edit, delete, and reorder control over team, testimonials, FAQs, events, gallery, and more.",
-      "Implemented secure admin authentication with hashed passwords, session handling, and an in-app password change screen.",
-      "Built image and PDF uploads, and a contact form with a spam honeypot that feeds an admin inbox with read and delete controls.",
-      "Chose a locked JSON flat-file store so the site runs on the client's shared hosting with no database setup, and hardened the data, include, and upload folders with .htaccess rules.",
-      "Designed the visual theme and iconography, and fixed mobile layout issues including hero spacing and centered, justified text blocks.",
-      "Backed up the live WordPress site and migrated the domain over to the new build on the existing cPanel hosting.",
+      "Rebuilt the entire public-facing website in custom PHP, migrating all content from WordPress.",
+      "Built a custom admin CMS to manage page content, team members, testimonials, FAQs, events, and gallery.",
+      "Implemented secure admin authentication, file uploads, and a contact form with spam protection.",
+      "Optimised the site for shared hosting using a JSON flat-file storage system, without requiring a database.",
+      "Managed the deployment and domain migration on the client's existing cPanel hosting.",
     ],
     cover: "/images/projects/jayfernandocoach/hero-banner.jpg",
     gallery: [
@@ -151,7 +149,35 @@ export const internshipProjects: InternshipProject[] = [
     featured: true,
     confidential: false,
   },
-
+  {
+  slug: "carmechanicperth",
+  title: "Car Mechanic Perth - Auto Repair & Servicing Website",
+  company: "Incarnate",
+  period: "2026 September - 2026 October",
+  summary:
+    "A new website for Car Mechanic Perth, an independent car servicing and repair workshop in Kelmscott, built to help local drivers find the right service and book it in a few taps.",
+  body: [
+    "Car Mechanic Perth is a responsive website for a car servicing and repair workshop in Kelmscott, Western Australia, helping customers explore services, learn about the workshop, and book appointments easily. The site features an interactive homepage with customer reviews, service highlights, FAQs, and local service areas, alongside a dedicated Services page covering 15 services with detailed popups, checklists, and booking options.",
+    "Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion, the site includes local SEO optimisation, Google Analytics, and a WhatsApp-based booking flow. It was exported as static files and deployed to the client's existing cPanel hosting."
+  ],
+  stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  liveUrl: "https://carmechanicperth.com.au/",
+  contribution: [
+    "Designed and built the entire responsive website using Next.js, TypeScript, and Tailwind CSS.",
+    "Developed interactive home and services pages, including animated service cards, a hero slider, reviews carousel, and FAQ accordion.",
+    "Implemented a WhatsApp booking flow, form validation, click-to-call, and directions links.",
+    "Optimised the website for local SEO with metadata, structured data, and location-focused content.",
+    "Set up Google Analytics and deployed the website to cPanel, resolving DNS issues."
+  ],
+  cover: "/images/projects/carmechanicperth/hero-banner.jpg",
+  gallery: [
+    "/images/projects/carmechanicperth/services-page.jpg",
+    "/images/projects/carmechanicperth/why-choose-us.jpg",
+    "/images/projects/carmechanicperth/booking-form.jpg",
+  ],
+  featured: true,
+  confidential: false,
+  },
   
 ];
 

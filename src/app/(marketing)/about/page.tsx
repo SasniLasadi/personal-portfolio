@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { MapPin, GraduationCap, Briefcase, Rocket, Wrench } from "lucide-react";
+import { MapPin, GraduationCap, Briefcase, Rocket, Wrench, BookOpen } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import { Stats } from "@/components/sections/stats";
 import { TechStack } from "@/components/sections/tech-stack";
 import { ButtonLink } from "@/components/ui/button";
 
 export const metadata: Metadata = { title: "About" };
 
-const tags = ["Full-Stack", "SE Intern", "Sri Lanka", "Est. 2024"];
+const tags = ["Full-Stack Development", "Software Engineering", "Problem Solving"];
 
 export default function AboutPage() {
   return (
     <>
+      {/* Introduction */}
       <section className="mx-auto max-w-content px-6 py-12 md:px-10 md:py-16">
         <div className="grid grid-cols-1 items-start gap-14 md:grid-cols-[1fr_1.2fr]">
           <div className="w-full max-w-md overflow-hidden rounded-[2rem] border border-ink/10 bg-surface md:max-w-none">
@@ -27,35 +27,24 @@ export default function AboutPage() {
 
           <div>
             <p className="font-mono text-sm text-ink-soft">00 / About</p>
+
             <h1 className="mt-3 text-balance font-display text-4xl font-extrabold leading-tight text-ink sm:text-5xl">
               Hi, I&rsquo;m Sasni
             </h1>
 
-            <div className="mt-6 flex flex-col gap-4 font-body text-base leading-relaxed text-ink-soft text-justify">
+            <div className="mt-6 flex flex-col gap-4 font-body text-base leading-relaxed text-ink-soft text-left md:text-justify">
               <p>
-                Software engineering intern &amp; CS undergrad passionate about building
-                full-stack products, from backend systems and infra to client facing web
-                platforms.
+                I&rsquo;m a Computer Science undergraduate interested in building practical 
+                software solutions, with experience in frontend 
+                development, backend systems, and API integration.
               </p>
-              <p>
-                I&rsquo;m a third year Computer Science undergraduate at IIT Sri Lanka, pursuing
-                a BSc(Hons) in Computer Science awarded by the University of Westminster.
-                Alongside my studies, I&rsquo;m currently interning at {siteConfig.company},
-                shipping full-stack client platforms and handling everything from frontend builds
-                to infra and deployment.
-              </p>
-            </div>
 
-            <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 font-body text-sm text-ink-soft">
-              <span className="inline-flex items-center gap-1.5">
-                <MapPin size={15} className="text-accent-warm" /> {siteConfig.location}
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <GraduationCap size={15} className="text-accent-warm" /> {siteConfig.university}
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <Briefcase size={15} className="text-accent-warm" /> {siteConfig.company}
-              </span>
+              <p>
+                I&rsquo;ve gained hands-on experience developing and maintaining client projects, 
+                solving technical problems, and contributing to different stages of the 
+                software development process. I&rsquo;m continuously strengthening my technical 
+                skills and working towards building reliable, user-focused applications.
+              </p>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-2">
@@ -71,20 +60,43 @@ export default function AboutPage() {
 
             <dl className="mt-9 grid grid-cols-1 gap-5 border-t border-ink/10 pt-8 sm:grid-cols-2">
               <div>
-                <dt className="font-mono text-[11px] uppercase tracking-wide text-ink-soft">University</dt>
-                <dd className="mt-1 font-body text-sm text-ink">{siteConfig.university}</dd>
+                <dt className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wide text-ink-soft">
+                  <GraduationCap size={14} className="text-accent-warm" />
+                  University
+                </dt>
+                <dd className="mt-2 font-body text-sm text-ink">
+                  {siteConfig.university}
+                </dd>
               </div>
+
               <div>
-                <dt className="font-mono text-[11px] uppercase tracking-wide text-ink-soft">Degree</dt>
-                <dd className="mt-1 font-body text-sm text-ink">{siteConfig.degree}</dd>
+                <dt className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wide text-ink-soft">
+                  <BookOpen size={14} className="text-accent-warm" />
+                  Degree
+                </dt>
+                <dd className="mt-2 font-body text-sm text-ink">
+                  {siteConfig.degree}
+                </dd>
               </div>
+
               <div>
-                <dt className="font-mono text-[11px] uppercase tracking-wide text-ink-soft">Location</dt>
-                <dd className="mt-1 font-body text-sm text-ink">{siteConfig.location}</dd>
+                <dt className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wide text-ink-soft">
+                  <MapPin size={14} className="text-accent-warm" />
+                  Location
+                </dt>
+                <dd className="mt-2 font-body text-sm text-ink">
+                  {siteConfig.location}
+                </dd>
               </div>
+
               <div>
-                <dt className="font-mono text-[11px] uppercase tracking-wide text-ink-soft">Currently</dt>
-                <dd className="mt-1 font-body text-sm text-ink">{siteConfig.company}</dd>
+                <dt className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wide text-ink-soft">
+                  <Briefcase size={14} className="text-accent-warm" />
+                  Current role
+                </dt>
+                <dd className="mt-2 font-body text-sm text-ink">
+                  Software Engineer Intern
+                </dd>
               </div>
             </dl>
 
@@ -97,11 +109,20 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Current work */}
       <section className="mx-auto max-w-content px-6 pb-16 md:px-10 md:pb-24">
         <p className="font-mono text-sm text-ink-soft">01 / Currently</p>
+
         <h2 className="mt-3 flex max-w-xl items-center gap-2.5 text-balance font-display text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
-          <Rocket size={26} className="text-accent-warm" /> What I&rsquo;m working on
+          <Rocket size={26} className="text-accent-warm" />
+          What I&rsquo;m working on
         </h2>
+
+        <p className="mt-4 max-w-2xl font-body text-sm leading-relaxed text-ink-soft">
+          My current focus is applying what I learn to real-world software,
+          improving existing features, and understanding how applications
+          perform beyond the development environment.
+        </p>
 
         <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {siteConfig.currentlyBuilding.map((item) => (
@@ -115,16 +136,23 @@ export default function AboutPage() {
         </ul>
       </section>
 
+      {/* Technical expertise */}
       <section className="mx-auto max-w-content px-6 pb-16 md:px-10 md:pb-24">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1fr_1.3fr]">
           <div>
             <p className="font-mono text-sm text-ink-soft">02 / Expertise</p>
+
             <h2 className="mt-3 flex items-center gap-2.5 text-balance font-display text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
-              <Wrench size={24} className="text-accent-warm" /> Tech I work with
+              <Wrench size={24} className="text-accent-warm" />
+              My technical toolkit
             </h2>
+
             <p className="mt-4 max-w-sm font-body text-sm leading-relaxed text-ink-soft">
-              A growing toolkit built through coursework, internship work, and personal projects. Each tool earns its place by solving a real problem in a shipped project, not by trend. 
-              The result is a stack that spans from infra and deployment to polished, client-facing interfaces.
+              I work across frontend and backend development, using different
+              technologies to build features, connect services, and manage
+              application data. I continue to strengthen my fundamentals
+              through hands-on projects, debugging, and exploring better ways
+              to design and maintain software.
             </p>
           </div>
 
@@ -133,7 +161,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
     </>
   );
 }
